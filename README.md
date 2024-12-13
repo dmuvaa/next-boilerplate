@@ -1,36 +1,167 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Supabase Boilerplate
+
+A comprehensive starter template for modern web development, featuring Next.js 15, React 19, Supabase, Prisma, ShadCN UI, and more.
+
+![Project Screenshot](placeholder-screenshot.png)
+
+## Features
+
+- **Next.js 15**: Utilizing the latest features and optimizations
+- **React 19**: Leveraging the newest React capabilities
+- **Supabase Integration**: For authentication and database management
+- **Prisma ORM**: Simplifying database operations
+- **ShadCN UI Components**: Beautiful, customizable UI elements
+- **Dark/Light Mode**: With system preference detection
+- **Hashnode CMS Integration**: For seamless blog management
+- **SEO Optimization**: Built-in SEO component for better search engine visibility
+- **Mailgun Integration**: For sending emails (e.g., contact form submissions)
+- **TypeScript Support**: For enhanced code quality and developer experience
+- **Responsive Design**: Mobile-first approach for all screen sizes
+- **User Profiles**: Basic user profile management
+- **Contact Form**: With server-side handling and email notifications
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v14 or later)
+- npm or yarn
+- A Supabase account
+- A Mailgun account
+- A Hashnode account (for blog integration)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   \`\`\`
+   git clone https://github.com/yourusername/nextjs-supabase-boilerplate.git
+   \`\`\`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Navigate to the project directory:
+   \`\`\`
+   cd nextjs-supabase-boilerplate
+   \`\`\`
 
-## Learn More
+3. Install dependencies:
+   \`\`\`
+   npm install
+   \`\`\`
+   or
+   \`\`\`
+   yarn install
+   \`\`\`
 
-To learn more about Next.js, take a look at the following resources:
+4. Set up environment variables (see Environment Variables section below)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Run the development server:
+   \`\`\`
+   npm run dev
+   \`\`\`
+   or
+   \`\`\`
+   yarn dev
+   \`\`\`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create a `.env.local` file in the root directory and add the following variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+\`\`\`env
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# Database
+DATABASE_URL=your_database_connection_string
+
+# Mailgun
+MAILGUN_API_KEY=your_mailgun_api_key
+MAILGUN_DOMAIN=your_mailgun_domain
+CONTACT_EMAIL=your_contact_email_address
+
+# Hashnode
+HASHNODE_PUBLICATION_ID=your_hashnode_publication_id
+\`\`\`
+
+### How to obtain the keys:
+
+1. **Supabase**: 
+   - Create a project at [supabase.com](https://supabase.com)
+   - Find your API URL and anon key in the project settings
+
+2. **Database URL**: 
+   - This is provided by Supabase. You can find it in your project's database settings
+
+3. **Mailgun**: 
+   - Sign up at [mailgun.com](https://www.mailgun.com)
+   - Obtain your API key and domain from your Mailgun dashboard
+
+4. **Hashnode**: 
+   - Create an account at [hashnode.com](https://hashnode.com)
+   - Set up a publication and find your publication ID in the publication settings
+
+## Usage Guide
+
+### Authentication
+
+The boilerplate comes with Supabase authentication set up. Use the `AuthForm` component to handle sign-up and sign-in functionality.
+
+### Database Operations
+
+Prisma is configured to work with your Supabase database. Use the Prisma client in your API routes or server components to perform database operations.
+
+### Blog Integration
+
+The blog is integrated with Hashnode CMS. Posts are fetched and displayed in the `/blog` route.
+
+### Contact Form
+
+A contact form is available that sends emails using Mailgun. The form submission is handled by the `/api/contact` route.
+
+### Styling
+
+The project uses Tailwind CSS for styling. Customize the theme in the `tailwind.config.js` file.
+
+## Project Structure
+
+\`\`\`
+├── app/
+│   ├── api/
+│   ├── blog/
+│   ├── dashboard/
+│   ├── profile/
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+├── lib/
+├── prisma/
+├── public/
+└── ...configuration files
+\`\`\`
+
+## Customization
+
+- **Theme**: Modify the `theme-provider.tsx` file to customize the theme
+- **Components**: Add or modify components in the `components/` directory
+- **API Routes**: Add new API routes in the `app/api/` directory
+- **Database Schema**: Update the schema in `prisma/schema.prisma` and run migrations
+
+## Deployment
+
+This project is ready to be deployed on Vercel:
+
+1. Push your code to a GitHub repository
+2. Connect your repository to Vercel
+3. Configure your environment variables in the Vercel dashboard
+4. Deploy!
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
