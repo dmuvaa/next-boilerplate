@@ -76,10 +76,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 # Database
 DATABASE_URL=your_database_connection_string
 
-# Mailgun
-MAILGUN_API_KEY=your_mailgun_api_key
-MAILGUN_DOMAIN=your_mailgun_domain
-CONTACT_EMAIL=your_contact_email_address
+# RESEND
+RESEND_API_KEY=your_resend_api_key
 
 # Hashnode
 HASHNODE_PUBLICATION_ID=your_hashnode_publication_id
@@ -94,9 +92,9 @@ HASHNODE_PUBLICATION_ID=your_hashnode_publication_id
 2. **Database URL**: 
    - This is provided by Supabase. You can find it in your project's database settings
 
-3. **Mailgun**: 
-   - Sign up at [mailgun.com](https://www.mailgun.com)
-   - Obtain your API key and domain from your Mailgun dashboard
+3. **Resend**: 
+   - Sign up at [resend.com](https://www.resend.com)
+   - Obtain your API key and domain from your Resend dashboard.
 
 4. **Hashnode**: 
    - Create an account at [hashnode.com](https://hashnode.com)
@@ -114,7 +112,11 @@ Prisma is configured to work with your Supabase database. Use the Prisma client 
 
 ### Blog Integration
 
-The blog is integrated with Hashnode CMS. Posts are fetched and displayed in the `/blog` route.
+The blog is integrated with Hashnode CMS, a feature-rich CMS platform, where you can create posts seamlessly. Posts are fetched and displayed in the `/blog` route.
+
+### Resend + React Email
+
+Resend Integration enables you to send transactional emails at scale.
 
 ### Contact Form
 
@@ -127,17 +129,28 @@ The project uses Tailwind CSS for styling. Customize the theme in the `tailwind.
 ## Project Structure
 
 \`\`\`
-├── app/
+├── src/app/
+
 │   ├── api/
+
 │   ├── blog/
+
 │   ├── dashboard/
+
 │   ├── profile/
+
 │   ├── layout.tsx
+
 │   └── page.tsx
+
 ├── components/
+
 ├── lib/
+
 ├── prisma/
+
 ├── public/
+
 └── ...configuration files
 \`\`\`
 
@@ -147,6 +160,7 @@ The project uses Tailwind CSS for styling. Customize the theme in the `tailwind.
 - **Components**: Add or modify components in the `components/` directory
 - **API Routes**: Add new API routes in the `app/api/` directory
 - **Database Schema**: Update the schema in `prisma/schema.prisma` and run migrations
+- **Web Pages**: Create web pages inside the `src/app folder` and add them to your header, footer, or dashboard.
 
 ## Deployment
 
