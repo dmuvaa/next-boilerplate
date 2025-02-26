@@ -14,7 +14,7 @@ A comprehensive starter template for modern web development, featuring Next.js 1
 - **Dark/Light Mode**: With system preference detection
 - **Hashnode CMS Integration**: For seamless blog management
 - **SEO Optimization**: Built-in SEO component for better search engine visibility
-- **Mailgun Integration**: For sending emails (e.g., contact form submissions)
+- **Resend Integration**: For sending emails (e.g., contact form submissions)
 - **TypeScript Support**: For enhanced code quality and developer experience
 - **Responsive Design**: Mobile-first approach for all screen sizes
 - **User Profiles**: Basic user profile management
@@ -27,7 +27,7 @@ A comprehensive starter template for modern web development, featuring Next.js 1
 - Node.js (v14 or later)
 - npm or yarn
 - A Supabase account
-- A Mailgun account
+- A Resend account
 - A Hashnode account (for blog integration)
 
 ### Installation
@@ -130,26 +130,22 @@ The project uses Tailwind CSS for styling. Customize the theme in the `tailwind.
 
 \`\`\`
 ├── src/app/
-
 │   ├── api/
-
 │   ├── blog/
-
 │   ├── dashboard/
-
 │   ├── profile/
-
 │   ├── layout.tsx
-
 │   └── page.tsx
 
-├── components/
-
+├── components/ui
 ├── lib/
-
 ├── prisma/
-
 ├── public/
+├── utils/
+├── lib/
+├── prisma/
+├── public/
+
 
 └── ...configuration files
 \`\`\`
@@ -160,7 +156,7 @@ The project uses Tailwind CSS for styling. Customize the theme in the `tailwind.
 - **Components**: Add or modify components in the `components/` directory
 - **API Routes**: Add new API routes in the `app/api/` directory
 - **Database Schema**: Update the schema in `prisma/schema.prisma` and run migrations
-- **Web Pages**: Create web pages inside the `src/app folder` and add them to your header, footer, or dashboard.
+- **Web Pages**: Create web pages inside the `src/app` folder and add them to your header, footer, or dashboard.
 
 ## Deployment
 
