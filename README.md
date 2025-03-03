@@ -13,6 +13,8 @@ A comprehensive starter template for modern web development, featuring Next.js 1
 - **ShadCN UI Components**: Beautiful, customizable UI elements
 - **Dark/Light Mode**: With system preference detection
 - **Hashnode CMS Integration**: For seamless blog management
+- **Stripe/Paystack Integration**: For handling payments
+- **Open AI integration**: For businesses that want to integrate AI features
 - **SEO Optimization**: Built-in SEO component for better search engine visibility
 - **Resend Integration**: For sending emails (e.g., contact form submissions)
 - **TypeScript Support**: For enhanced code quality and developer experience
@@ -24,11 +26,13 @@ A comprehensive starter template for modern web development, featuring Next.js 1
 
 ### Prerequisites
 
-- Node.js (v14 or later)
+- Node.js (v20 or later)
 - npm or yarn
 - A Supabase account
 - A Resend account
 - A Hashnode account (for blog integration)
+- Stripe/Paystack Account
+- Open AI account
 
 ### Installation
 
@@ -113,6 +117,14 @@ Prisma is configured to work with your Supabase database. Use the Prisma client 
 ### Blog Integration
 
 The blog is integrated with Hashnode CMS, a feature-rich CMS platform, where you can create posts seamlessly. Posts are fetched and displayed in the `/blog` route.
+
+### Stripe Integration
+
+Stripe payment integration enables you to receive payments from your users.
+
+### Paystack Integration
+
+Paystack is a Stripe alternative for users in Africa who can't access Stripe.
 
 ### Resend + React Email
 
